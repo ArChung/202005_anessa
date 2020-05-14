@@ -29,7 +29,7 @@
       height: auto
       top: 50%                 
       left: 50%                
-      transform: translate(-50%,-50%)     
+      transform: translate(-50%,-50%)  
       background-size: cover
       
 
@@ -41,6 +41,12 @@
       top: 35px
       left: 70px
       // transform: translate(0, -50%)
+      @media screen and (max-height: 900px)
+        transform: translate(0%, 0%) scale(.8)
+        transform-origin: 0% 0%
+      @media screen and (max-height: 780px)
+        transform: translate(0%, 0%) scale(.6)
+        transform-origin: 0% 0%
       +phone 
         // right: 15px
         // top: 40%
@@ -64,12 +70,20 @@
       bottom: 220px
       .txt-content  
         +aniPicsWrap
+
+      @media screen and (max-height: 900px)
+        transform: translate(0%, 0%) scale(.8)
+        transform-origin: 100% 100%
+      @media screen and (max-height: 780px)
+        transform: translate(0%, 0%) scale(.6)
+        transform-origin: 100% 100%
+
       +phone 
         right: 0px
         top: auto
         bottom: 0px
         transform: translate(0%, 0%) scale(.8)
-        transform-origin: 100% 50%
+        transform-origin: 100% 100%
       .t1
         +bg('index-tt1.png')
 

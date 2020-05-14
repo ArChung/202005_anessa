@@ -5,6 +5,15 @@ import browserSync from "browser-sync"
 import minimist from "minimist"
 import sassImage from "gulp-sass-image"
 import order from "gulp-order"
+let uglify = require('gulp-uglify-es').default;
+
+
+var cache = require('gulp-cache');
+var imagemin = require('gulp-imagemin');
+var imageminPngquant = require('imagemin-pngquant');
+var imageminZopfli = require('imagemin-zopfli');
+var imageminMozjpeg = require('imagemin-mozjpeg'); //need to run 'brew install libpng'
+// var imageminGiflossy = require('imagemin-giflossy');
 
 // import merge from 'merge-stream'
 
@@ -160,7 +169,7 @@ export function babel() {
     .pipe(
       $.if(
         envIsPro,
-        $.uglify({
+        uglify({
           compress: {
             drop_console: true
           }
@@ -178,81 +187,110 @@ export function babel() {
 export function imageMin() {
   return gulp
     .src("./src/images/*")
-    .pipe($.if(envIsPro, $.imagemin()))
-    .pipe(gulp.dest("./public/images"))
-    .pipe($.if(envIsPro, browserSync.stream()))
+    .pipe($.if(envIsPro, cache(imagemin([
+        //png
+        imageminPngquant({
+          speed: 1,
+          quality: [0.8, 0.95] //lossy settings
+        }),
+        imageminZopfli({
+          more: true
+          // iterations: 50 // very slow but more effective
+        }),
+        // gif
+        imagemin.gifsicle({
+            interlaced: true,
+            optimizationLevel: 3
+        }),
+        //svg
+        imagemin.svgo({
+          plugins: [{
+            removeViewBox: false
+          }]
+        }),
+        //jpg lossless
+        imagemin.mozjpeg({
+          progressive: true
+        }),
+        //jpg very light lossy, use vs jpegtran
+        imageminMozjpeg({
+          quality: 90
+        })
+      ]))))
+      .pipe(gulp.dest("./public/images"))
+      .pipe($.if(envIsPro, browserSync.stream()))
 
-}
-
-
-/*****************************************************
- *  實時預覽 block
- *****************************************************/
-export function browser() {
-  browserSync.init({
-    server: {
-      baseDir: "./public",
-      reloadDebounce: 2000,
-      logLevel: "silent"
     }
-  })
-}
 
-export function watch() {
-  gulp.watch(["./src/**/*.html", "./src/**/*.ejs"], ejs)
-  // gulp.watch(['./src/**/*.jade', './src/**/*.pug'], ['jade'])
-  gulp.watch(
-    ["./src/sass/**/*.sass", "./src/sass/**/*.scss"],
-    sass
-  )
-  gulp.watch("./src/js/**/*.js", babel)
-  gulp.watch("./src/images/**/*.+(jpeg|jpg|png|gif|svg)", gulp.series(goSassImage,imageMin));
-  console.log("watching file ~")
-}
 
-/*****************************************************
- *  指令 block
- *****************************************************/
-// exports.default = gulp.parallel(
-//   imageMin,
-//   babel,
-//   vendorJS,
-//   sass,
-//   goSassImage,
-//   ejs,
-//   browser,
-//   watch
-// )
-exports.default = gulp.series(
-  goSassImage,
-  gulp.parallel(imageMin,
-    babel,
-    vendorJS,
-    sass,
+  /*****************************************************
+   *  實時預覽 block
+   *****************************************************/
+  export function browser() {
+    browserSync.init({
+      server: {
+        baseDir: "./public",
+        reloadDebounce: 2000,
+        logLevel: "silent"
+      }
+    })
+  }
+
+  export function watch() {
+    gulp.watch(["./src/**/*.html", "./src/**/*.ejs"], ejs)
+    // gulp.watch(['./src/**/*.jade', './src/**/*.pug'], ['jade'])
+    gulp.watch(
+      ["./src/sass/**/*.sass", "./src/sass/**/*.scss"],
+      sass
+    )
+    gulp.watch("./src/js/**/*.js", babel)
+    gulp.watch("./src/images/**/*.+(jpeg|jpg|png|gif|svg)", gulp.series(goSassImage, imageMin));
+    console.log("watching file ~")
+  }
+
+  /*****************************************************
+   *  指令 block
+   *****************************************************/
+  // exports.default = gulp.parallel(
+  //   imageMin,
+  //   babel,
+  //   vendorJS,
+  //   sass,
+  //   goSassImage,
+  //   ejs,
+  //   browser,
+  //   watch
+  // )
+  exports.default = gulp.series(
     goSassImage,
-    ejs,
-    browser,
-    watch
+    gulp.parallel(imageMin,
+      babel,
+      vendorJS,
+      sass,
+      goSassImage,
+      ejs,
+      browser,
+      watch
+    )
   )
-)
 
 
-exports.build = gulp.series(
-  gulp.series(goSassImage, clean, copy),
-  gulp.parallel(vendorJS, babel, sass, ejs, imageMin)
-)
+  exports.build = gulp.series(
+    gulp.series(goSassImage, clean, copy),
+    gulp.parallel(vendorJS, babel, sass, ejs, imageMin)
+  )
 
-// = gulp build --env production
-exports.buildPro = gulp.series(
-  cb => {
-    envIsPro = true
-    cb()
-  },
-  gulp.series(goSassImage, clean, copy),
-  gulp.parallel(vendorJS, babel, sass, ejs, imageMin)
-)
+  // = gulp build --env production
+  exports.buildPro = gulp.series(
+    cb => {
+      envIsPro = true
+      cb()
+    },
+    gulp.series(goSassImage, clean, copy),
+    gulp.parallel(vendorJS, babel, sass, ejs, imageMin)
+  )
 
-function deploy() {
-  return gulp.src("./public/**/*").pipe($.ghPages())
-}
-exports.deploy = deploy
+  function deploy() {
+    return gulp.src("./public/**/*").pipe($.ghPages())
+  }
+  exports.deploy = deploy

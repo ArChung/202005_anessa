@@ -1,7 +1,6 @@
 .vscode
 .publish
 node_modules
-public
 bower_components
 .tmp
 package-lock.json

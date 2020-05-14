@@ -1,0 +1,24 @@
+.header
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  height: 100px
+  z-index: 50
+  background-color: white
+  display: flex
+  align-items: center
+  padding: 0 25px
+  .menuBtn
+    +bg('menuBtn.png')
+    cursor: pointer
+    +dTime
+    &.cloz
+      +bgi('menuBtnCloz.png')
+  .logo
+    +bg('logo.png')
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+

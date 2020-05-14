@@ -1,0 +1,263 @@
+
+.tempHide
+  transform: translate(0, 50px)
+  opacity: 0
+  +dTime(.8s)
+  &.show
+    opacity: 1
+    transform: translate(0, 0)
+
+
+=aniPicsWrap
+  position: relative
+  > *
+    position: absolute
+    top: 0
+    left: 0
+
+  > *:first-child
+    position: relative
+
+
+.mainContainer
+  overflow: hidden
+  width: 100%
+  padding-top: 100px
+
+
+#top-btn
+  +bg('topBtn.png')
+  position: fixed
+  bottom: 100px
+  right: 20px
+  cursor: pointer
+  z-index: 99
+  transform: translate(0, 500px)
+  will-change: transform
+  opacity: 0
+  +dTime(.5s)
+  
+  &.show
+    opacity: 1
+    transform: translate(0, 0px)
+    &:hover
+      transform: translate(0, -10px)
+  +phone 
+    right: 0px
+
+#event-btn
+  +aniPicsWrap
+  position: fixed
+  bottom: 15px
+  right: 0
+  z-index: 100
+  will-change: transform
+  transform: translate(100%, 0)
+  +dTime(.8s)
+
+  .bg
+    +bg('index-pro2.png')
+  
+  .pro
+    +bg('index-pro0.gif')
+    
+  &.show
+    transform: translate(0%, 0)
+
+
+.custom-select
+  position: relative
+  display: block
+  max-width: 400px
+  min-width: 160px
+  // margin: 0 auto
+  border: 1px solid white
+  background-color: #1199c6
+  z-index: 10
+  
+  select
+    border: none
+    outline: none
+    background: transparent
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    border-radius: 0
+    margin: 0
+    display: block
+    width: 100%
+    padding: 12px 40px 15px 15px
+    font-size: 24px
+    color: #fff
+    background-color: #1199c6
+  &:after
+    position: absolute
+    right: 10px
+    top: 50%
+    transform: translate(-50%, -50%)
+    pointer-events: none
+
+    content: ''
+    +bg('icon-arrD.png')
+
+
+
+/* Customize the label (the container) */
+.custom-input
+  display: block
+  position: relative
+  padding-left: 35px
+  margin-bottom: 12px
+  cursor: pointer
+  font-size: 22px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+
+  input 
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+
+
+  .checkmark 
+    position: absolute
+    top: 0
+    left: 0
+    height: 25px
+    width: 25px
+    border: 1px solid #000
+    +dTime
+
+
+  input:checked ~ .checkmark 
+    background-color: #2196F3
+
+
+  .checkmark:after 
+    content: ""
+    position: absolute
+    display: none
+    transform: scale(0.1)
+    +dTime
+
+  input:checked ~ .checkmark:after 
+    display: block
+    
+
+
+
+  .checkmark:after 
+    left: 8px
+    top: 4px
+    width: 5px
+    height: 10px
+    border: solid white
+    border-width: 0 3px 3px 0
+    -webkit-transform: rotate(45deg) scale(1)
+    -ms-transform: rotate(45deg) scale(1)
+    transform: rotate(45deg) scale(1)
+
+
+
+
+.bg-gradient-1
+  background: rgb(210,173,115)
+  background: linear-gradient(90deg, rgba(210,173,115,1) 0%, rgba(235,210,161,1) 50%, rgba(210,173,115,1) 100%)
+
+.bg-gradient-2
+  background: rgb(227,216,197)
+  background: linear-gradient(129deg, rgba(227,216,197,1) 0%, rgba(254,254,253,1) 100%)
+
+
+
+
+.form-btn
+  +bg('btn-1.png')
+  text-align: center
+  padding-top: 11px
+  font-size: 18px
+  position: relative
+  letter-spacing: 0.1em
+  font-weight: bold
+  cursor: pointer
+  width: 285px
+  background-size: 100% 100%
+  transform-origin: 50% 50%
+  +dTime(0.1s)
+  &.blue
+    +bg('btn-2.png')
+    width: 285px
+  &.white
+    +bg('btn-3.png')
+    width: 285px
+  &:after
+    content: ''
+    position: absolute
+    top: 17px
+    right: 15px
+    +bg('arr.png')
+    +dTime
+  &:hover
+    transform: scale(.95)
+    &:after
+      right: 20px
+
+
+.form-input
+  width: 100%
+  background-color: #1199c6
+  border: 1px solid white
+  padding: 15px
+  font-size: 19px
+  margin: 5px 0px
+  color: white
+  &::placeholder
+    color: white
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover, 
+  &:-webkit-autofill:focus,
+    -webkit-box-shadow: 0 0 0px 1000px #1199c6 inset
+    transition: background-color 5000s ease-in-out 0s
+    -webkit-text-fill-color: white
+
+.shake-go 
+	+do-shake('shake-go ', 5, 5, 1, 300ms)
+
+.blocker
+  z-index: 100
+  background-color: rgba(black,.5)
+  .modal
+    box-shadow: 0 0 10px rgba(black,.3)
+    max-width: none
+    width: auto
+    +phone
+      transform: scale(1.5)
+    p
+      font-size: 18px
+      text-align: center
+      // font-weight: bold
+    .store-btns
+      display: flex
+      justify-content: space-between
+      +phone
+        flex-direction: column
+        align-items: center
+    .store-btn
+      overflow: hidden
+      border-radius: 5px
+      border: 1px solid rgba(#1199c6,.5)
+      margin: 10px
+      flex-shrink: 0
+      display: inline-block
+      +dTime
+      cursor: pointer
+      &:hover
+        opacity: 0.7
+      img 
+        display: block
+  

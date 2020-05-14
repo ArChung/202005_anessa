@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> <%- title %> </title>
+  <!-- hiding the Browser’s User Interface -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- iOS 6 -->
+  <meta name="apple-mobile-web-app-title" content="">
+  <!-- meta start -->
+  <meta name="title" content="<%- title %>" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="copyright" content="" />
+  <link rel="image_src" href="" />
+
+  <!-- OG -->
+  <meta property="og:title" content="<%- title %>" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="" />
+  <meta property="fb:app_id" content="" />
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
+
+  <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+  <% include views/sider %>
+
+  <!-- navbar -->
+  <% include views/header %>
+  <!-- navbar END -->
+
+  
+
+
+  <div class="mainContainer panel" id='mainContainer'>
+
+    <!-- contents -->
+    <%- contents %>
+    <!-- contents END -->
+
+    <!-- footer -->
+    <% include views/footer %>
+    <!-- footer END -->
+
+  </div>
+
+  <div id="modal" class="modal">
+    <p>請選擇電商</p>
+    <div class="store-btns">
+      <a href="#" target='_blank' class="store-btn">
+        <img src="./images/store-1.jpg" alt="">
+      </a>
+      <a href="#" target='_blank' class="store-btn">
+        <img src="./images/store-2.jpg" alt="">
+      </a>
+      <a href="#" target='_blank' class="store-btn">
+        <img src="./images/store-3.png" alt="">
+      </a>
+    </div>
+  </div>
+
+
+  <!-- js -->
+  <script src="js/vendor.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script> -->
+  <script src="js/all.js"></script>
+  <!-- js END-->
+
+  <!-- for engineer -->
+  <script>
+    // 表單下一步
+    $('#form-section .btn-next').on('click', function () {
+      form_next();
+    })
+
+    // 表單上一步
+    $('#form-section .btn-prev').on('click', function () {
+      form_prev();
+    })
+  </script>
+</body>
+
+</html>

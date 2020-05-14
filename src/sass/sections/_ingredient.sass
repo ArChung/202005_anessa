@@ -1,0 +1,113 @@
+.ingredient
+  min-height: 100vh 
+  +coverBg('bg2.jpg')
+  background-position: 50% 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  padding: 150px 0
+  
+  .title
+    position: relative
+    display: flex
+    align-items: center
+    z-index: 10
+    +dTime(.8s)
+    +phone
+      transform: scale(.8)
+    .t1
+      +bg('p2-title1.png')
+
+    .t2
+      +bg('p2-title2.png')
+      margin-left: 15px
+  .note
+    color: white
+    font-size: 14px
+    line-height: 1.6em
+    padding: 20px
+
+  .content
+    display: flex
+    align-items: flex-end
+    margin-top: 30px
+    max-width: 100%
+    +phone 
+      flex-direction: column
+
+
+    .videoWrap
+      position: relative
+      width: 846px
+      z-index: 5
+      max-width: 100%
+      +phone 
+        width: 92%
+        align-self: start
+      .frame
+        +full
+        position: absolute
+        border: 1px solid rgba(white,.5)
+        top: 7px
+        left: -8px
+        z-index: 2
+      .videoBox
+        overflow: hidden
+        width: 100%
+      video
+        width: 100%
+        position: relative
+        left: 1px
+      .videoTitle
+        position: absolute
+        top: 15%
+        left: 50%
+        transform: translate(-50%, 0)
+        +dTime
+        opacity: 0
+        z-index: 4
+        max-width: 80%
+        &.show
+          opacity: 1
+        
+      .txt
+        position: absolute
+        top: 100%
+        left: 0
+        color: white
+        font-size: 14px
+        padding: 20px
+        padding-right: 80px
+        line-height: 1.6em
+
+    .textWrap
+      +coverBg('p2-txtBg.jpg')
+      display: flex
+      flex-direction: column
+      width: 533px
+      padding: 80px 40px 80px 80px
+      align-items: center
+      position: relative
+      top: -40px
+      left: -40px
+      +phone 
+        top: 0
+        left: 0
+        margin-top: 20px
+        width: 90%
+      .headline
+        +aniPicsWrap
+
+        .t1
+          +bg('p2-pop2.png')
+
+        .t2
+          +bg('p2-pop1.png')
+
+      .txt
+        margin-top: 30px
+        color: white
+        font-size: 21px
+        letter-spacing: .2em  
+        line-height: 1.8em

@@ -1,0 +1,67 @@
+.ingredient2
+  min-height: 100vh 
+  +coverBg('bg3.jpg')
+  background-position: 0% 50%
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  padding: 150px 0
+  font-size: 21px
+  color: white
+  padding-right: 30px
+
+  +phone 
+    +bgi('bg3-moblie.jpg')
+    background-position: 0% 100%
+    justify-content: center
+    padding-right: 0px
+    display: block
+    min-height: auto
+    padding-bottom: 360px
+  .content
+
+
+    .headline
+      +phone 
+        // display: flex
+        // align-items: center
+        // flex-direction: column
+        margin-left: 35px
+      .t1
+        +bg('p3-t1.png')
+      .txt 
+        margin-top: 20px
+        padding-left: 17px
+        font-size: 22px
+        +phone 
+          padding-left: 0px
+          font-size: 24px
+          font-weight: bold
+
+    .sub
+      padding-left: 136px 
+      padding-top: 76px
+      font-size: 19px
+      background-repeat: no-repeat
+      line-height: 1.6em
+      margin-top: 40px
+      +phone 
+        font-size: 22px
+    .title2
+      +bgi('p3-t2.png')
+      min-width: 479px
+      min-height: 132px
+      margin-left: 30px
+      +phone 
+        min-width: auto
+        margin-left: 20px
+    
+    .title3
+      +bgi('p3-t3.png')
+      min-width: 562px
+      min-height: 168px
+      margin-left: 60px
+      +phone 
+        margin-left: 20px
+        min-width: auto
+        

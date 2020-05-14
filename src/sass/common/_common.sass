@@ -3,10 +3,26 @@
   transform: translate(0, 50px)
   opacity: 0
   +dTime(.8s)
+ 
+  &.left
+    transform: translate(-50px, 0px)
+  &.right
+    transform: translate(50px, 0px)
   &.show
     opacity: 1
-    transform: translate(0, 0)
+    transform: translate(0, 0) 
 
+
+.underline
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 1px
+    background-color: #fff
+    bottom: -1px
+    left: 0
 
 =aniPicsWrap
   position: relative
@@ -59,7 +75,7 @@
     +bg('index-pro2.png')
   
   .pro
-    +bg('index-pro0.gif')
+    +bg('index-pro0-1.gif')
     
   &.show
     transform: translate(0%, 0)
@@ -183,18 +199,31 @@
   font-size: 18px
   position: relative
   letter-spacing: 0.1em
-  font-weight: bold
+  // font-weight: bold
   cursor: pointer
   width: 285px
   background-size: 100% 100%
   transform-origin: 50% 50%
   +dTime(0.1s)
+  
   &.blue
     +bg('btn-2.png')
     width: 285px
   &.white
     +bg('btn-3.png')
     width: 285px
+    
+  +phone
+    height: 90px
+    padding-top: 22px
+    width: 100%
+    font-size: 24px 
+    &.white
+      height: 90px
+      width: 100%
+    &.blue
+      height: 90px
+      width: 100%
   &:after
     content: ''
     position: absolute
@@ -202,6 +231,10 @@
     right: 15px
     +bg('arr.png')
     +dTime
+    +phone 
+      transform: scale(1.5)
+      top: 32px
+      right: 25px
   &:hover
     transform: scale(.95)
     &:after

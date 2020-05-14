@@ -6,6 +6,10 @@
   // +phone
   //   +ratio(750,900)
   //   height: auto
+  +phone 
+    +ratio(750,901)
+    height: auto
+
   .back-bg
     position: absolute
     top: 0
@@ -34,9 +38,9 @@
     
     .textLeft
       position: absolute
-      top: 45%
+      top: 35px
       left: 70px
-      transform: translate(0, -50%)
+      // transform: translate(0, -50%)
       +phone 
         // right: 15px
         // top: 40%
@@ -57,14 +61,13 @@
     .textRight
       position: absolute
       right: 25px
-      top: 38%
-      transform: translate(0%, -50%) scale(.8)
+      bottom: 220px
       .txt-content  
         +aniPicsWrap
       +phone 
         right: 0px
         top: auto
-        bottom: 380px
+        bottom: 0px
         transform: translate(0%, 0%) scale(.8)
         transform-origin: 100% 50%
       .t1

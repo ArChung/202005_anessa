@@ -59,7 +59,7 @@
       +pad
         display: block
     .swiper-btn-prev
-      +bg('arrLeft.png')
+      +bg('arrLeft2.png')
       left: 25px
       +dTime
       +arr_animation
@@ -67,11 +67,11 @@
         left: -100px
 
     .swiper-btn-next
-      +bg('arrRight.png')
+      +bg('arrRight2.png')
       right: 25px
       +dTime
       +arr_animation2
-      &.swiper-button-disabled
+      &.swiper-button-disabled  
         right: -100px
     // .swiper-button-disabled
     //   opacity: 0
@@ -82,6 +82,8 @@
     display: flex
     justify-content: center
     align-items: center
+    +phone
+      padding: 150px 0
     @if ($id == 3)
       +coverBg('pbg-2.jpg')
 
@@ -89,20 +91,21 @@
       flex-direction: column
       display: flex
       align-items: center
-
+      +phone
+        transform: scale(1.25)
       .pro-title
         font-size: 40px
         font-weight: bold
         color: #483431
         @if ($id  == 3)
           color: #298bc3
-        +phone 
-          font-size: 45px
         .txt
           span
             display: inline-block
         .icon-x
           margin: 0 5px
+        +phone 
+          font-size: 38px
       .proBox
         margin-top: 30px
         position: relative
@@ -149,9 +152,9 @@
         cursor: pointer
         position: relative
         margin-top: 15px
-        +bg('btn-1.png')
+        +bg('btn-1.gif')
         @if ($id == 3)
-          +bg('btn-2.png')
+          +bg('btn-2.gif')
         &:after
           content: ''
           right: 15px
@@ -161,7 +164,10 @@
 
       .more
         align-self: start
+        margin: 0 auto
         margin-top: 5px
+        display: block
+        width: 400px
   .pro-1
     +product(1,1.5s)
 

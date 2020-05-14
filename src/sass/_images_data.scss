@@ -151,15 +151,15 @@ $compass-imagehelper-imagesmap: (
     height: '7',
     hash: 'd8b912cbec81dede9e6764a961d1aef4'
   ),
-  'arrLeft.png': (
-    width: '46',
-    height: '86',
-    hash: 'd86d3f118aa2d3f9d645d0d96e3bd8e1'
+  'arrLeft2.png': (
+    width: '32',
+    height: '60',
+    hash: 'c40214655f7e9bbd7b72c1c2e9d43617'
   ),
-  'arrRight.png': (
-    width: '46',
-    height: '86',
-    hash: 'ee801ffdb149fb99cdc81fb7b7ad465a'
+  'arrRight2.png': (
+    width: '35',
+    height: '65',
+    hash: 'e1df7e8a64c4cbe6a595cd248b413059'
   ),
   'beauty01.png': (
     width: '356',
@@ -216,10 +216,20 @@ $compass-imagehelper-imagesmap: (
     height: '763',
     hash: '67c961e136f8de808c66d264dd914d2b'
   ),
+  'btn-1.gif': (
+    width: '400',
+    height: '47',
+    hash: '0db537da37d1ddbb0e3fb77c717ac0c7'
+  ),
   'btn-1.png': (
     width: '400',
     height: '58',
     hash: 'f6c210732c9d8811ea31af35d3ee7b86'
+  ),
+  'btn-2.gif': (
+    width: '400',
+    height: '46',
+    hash: 'a5b7773eac6251e12340691e13dfdf5f'
   ),
   'btn-2.png': (
     width: '400',
@@ -281,6 +291,11 @@ $compass-imagehelper-imagesmap: (
     height: '245',
     hash: 'c50f4718ad2ddcfc9ba831a57185cf1c'
   ),
+  'index-pro0-1.gif': (
+    width: '362',
+    height: '251',
+    hash: 'd5bf9a964485f65b3934b58e8cc13958'
+  ),
   'index-pro0.gif': (
     width: '363',
     height: '252',
@@ -291,20 +306,25 @@ $compass-imagehelper-imagesmap: (
     height: '252',
     hash: 'e786a60c7fa55a8a19f055119cc6a27f'
   ),
+  'index-pro2-1.png': (
+    width: '362',
+    height: '251',
+    hash: '982866121b21accddb0cb99b31381954'
+  ),
   'index-pro2.png': (
-    width: '363',
-    height: '252',
-    hash: '6b9a9570c0404bb78819ce7f5f406856'
+    width: '362',
+    height: '251',
+    hash: 'bcd4f07984477faec043cc9121615e0a'
   ),
   'index-t1.png': (
-    width: '164',
+    width: '191',
     height: '488',
-    hash: '8a60279bd5e396cc9b49704f2da4438b'
+    hash: '0f3b7ac5de6c82a74405e5d93b30b678'
   ),
   'index-t2.png': (
-    width: '164',
+    width: '191',
     height: '488',
-    hash: 'f6b7ae43e310666d33cc1405031c5d48'
+    hash: 'dffdc9296d2350434602753db821328f'
   ),
   'index-tt1.png': (
     width: '230',
@@ -351,10 +371,20 @@ $compass-imagehelper-imagesmap: (
     height: '60',
     hash: 'ab53d6351857ccfd2dce4a9d0d6b2b65'
   ),
+  'menuBtn2.png': (
+    width: '80',
+    height: '82',
+    hash: 'd0ba71f098ea9fc3be5bae1f54f42e40'
+  ),
   'menuBtnCloz.png': (
     width: '64',
     height: '60',
     hash: '3b6a9658b75d43ca30548484d84cf330'
+  ),
+  'menuBtnCloz2.png': (
+    width: '80',
+    height: '79',
+    hash: 'a5b9d72774dd53a307ccb38a9be25397'
   ),
   'p2-pop1.png': (
     width: '386',
@@ -394,7 +424,7 @@ $compass-imagehelper-imagesmap: (
   'p3-t3.png': (
     width: '562',
     height: '128',
-    hash: '696c0cbe1e0f789240ff8c7c764850c0'
+    hash: '68a068e55484e2c0a70cda1270fdefd2'
   ),
   'p4-t1.png': (
     width: '301',
@@ -475,6 +505,11 @@ $compass-imagehelper-imagesmap: (
     width: '267',
     height: '67',
     hash: '577af78f0c9b81158d84ebd0ccbfd9fb'
+  ),
+  'pro.gif': (
+    width: '277',
+    height: '364',
+    hash: '68bb26f38ba35c6c427c0bbbbcd4cc3d'
   ),
   'pro1-badge.gif': (
     width: '87',
@@ -588,36 +623,36 @@ $compass-imagehelper-imagesmap: (
   background-image: image-url('arr.png');
 }
 
-%arrLeft-png {
+%arrLeft2-png {
   // Available properties:
   // prefix: ;
-  // width: 46;
-  // height: 86;
-  // filename: arrLeft.png;
-  // basename: arrLeft;
+  // width: 32;
+  // height: 60;
+  // filename: arrLeft2.png;
+  // basename: arrLeft2;
   // dirname: images;
   // ext: .png;
-  // path: arrLeft.png;
-  // fullname: arrLeft-png;
+  // path: arrLeft2.png;
+  // fullname: arrLeft2-png;
   // mime: image/png;
-  // hash: d86d3f118aa2d3f9d645d0d96e3bd8e1;
-  background-image: image-url('arrLeft.png');
+  // hash: c40214655f7e9bbd7b72c1c2e9d43617;
+  background-image: image-url('arrLeft2.png');
 }
 
-%arrRight-png {
+%arrRight2-png {
   // Available properties:
   // prefix: ;
-  // width: 46;
-  // height: 86;
-  // filename: arrRight.png;
-  // basename: arrRight;
+  // width: 35;
+  // height: 65;
+  // filename: arrRight2.png;
+  // basename: arrRight2;
   // dirname: images;
   // ext: .png;
-  // path: arrRight.png;
-  // fullname: arrRight-png;
+  // path: arrRight2.png;
+  // fullname: arrRight2-png;
   // mime: image/png;
-  // hash: ee801ffdb149fb99cdc81fb7b7ad465a;
-  background-image: image-url('arrRight.png');
+  // hash: e1df7e8a64c4cbe6a595cd248b413059;
+  background-image: image-url('arrRight2.png');
 }
 
 %beauty01-png {
@@ -796,6 +831,22 @@ $compass-imagehelper-imagesmap: (
   background-image: image-url('bg5.jpg');
 }
 
+%btn-1-gif {
+  // Available properties:
+  // prefix: ;
+  // width: 400;
+  // height: 47;
+  // filename: btn-1.gif;
+  // basename: btn-1;
+  // dirname: images;
+  // ext: .gif;
+  // path: btn-1.gif;
+  // fullname: btn-1-gif;
+  // mime: image/gif;
+  // hash: 0db537da37d1ddbb0e3fb77c717ac0c7;
+  background-image: image-url('btn-1.gif');
+}
+
 %btn-1-png {
   // Available properties:
   // prefix: ;
@@ -810,6 +861,22 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: f6c210732c9d8811ea31af35d3ee7b86;
   background-image: image-url('btn-1.png');
+}
+
+%btn-2-gif {
+  // Available properties:
+  // prefix: ;
+  // width: 400;
+  // height: 46;
+  // filename: btn-2.gif;
+  // basename: btn-2;
+  // dirname: images;
+  // ext: .gif;
+  // path: btn-2.gif;
+  // fullname: btn-2-gif;
+  // mime: image/gif;
+  // hash: a5b7773eac6251e12340691e13dfdf5f;
+  background-image: image-url('btn-2.gif');
 }
 
 %btn-2-png {
@@ -1004,6 +1071,22 @@ $compass-imagehelper-imagesmap: (
   background-image: image-url('index-pro.png');
 }
 
+%index-pro0-1-gif {
+  // Available properties:
+  // prefix: ;
+  // width: 362;
+  // height: 251;
+  // filename: index-pro0-1.gif;
+  // basename: index-pro0-1;
+  // dirname: images;
+  // ext: .gif;
+  // path: index-pro0-1.gif;
+  // fullname: index-pro0-1-gif;
+  // mime: image/gif;
+  // hash: d5bf9a964485f65b3934b58e8cc13958;
+  background-image: image-url('index-pro0-1.gif');
+}
+
 %index-pro0-gif {
   // Available properties:
   // prefix: ;
@@ -1036,11 +1119,27 @@ $compass-imagehelper-imagesmap: (
   background-image: image-url('index-pro0.png');
 }
 
+%index-pro2-1-png {
+  // Available properties:
+  // prefix: ;
+  // width: 362;
+  // height: 251;
+  // filename: index-pro2-1.png;
+  // basename: index-pro2-1;
+  // dirname: images;
+  // ext: .png;
+  // path: index-pro2-1.png;
+  // fullname: index-pro2-1-png;
+  // mime: image/png;
+  // hash: 982866121b21accddb0cb99b31381954;
+  background-image: image-url('index-pro2-1.png');
+}
+
 %index-pro2-png {
   // Available properties:
   // prefix: ;
-  // width: 363;
-  // height: 252;
+  // width: 362;
+  // height: 251;
   // filename: index-pro2.png;
   // basename: index-pro2;
   // dirname: images;
@@ -1048,14 +1147,14 @@ $compass-imagehelper-imagesmap: (
   // path: index-pro2.png;
   // fullname: index-pro2-png;
   // mime: image/png;
-  // hash: 6b9a9570c0404bb78819ce7f5f406856;
+  // hash: bcd4f07984477faec043cc9121615e0a;
   background-image: image-url('index-pro2.png');
 }
 
 %index-t1-png {
   // Available properties:
   // prefix: ;
-  // width: 164;
+  // width: 191;
   // height: 488;
   // filename: index-t1.png;
   // basename: index-t1;
@@ -1064,14 +1163,14 @@ $compass-imagehelper-imagesmap: (
   // path: index-t1.png;
   // fullname: index-t1-png;
   // mime: image/png;
-  // hash: 8a60279bd5e396cc9b49704f2da4438b;
+  // hash: 0f3b7ac5de6c82a74405e5d93b30b678;
   background-image: image-url('index-t1.png');
 }
 
 %index-t2-png {
   // Available properties:
   // prefix: ;
-  // width: 164;
+  // width: 191;
   // height: 488;
   // filename: index-t2.png;
   // basename: index-t2;
@@ -1080,7 +1179,7 @@ $compass-imagehelper-imagesmap: (
   // path: index-t2.png;
   // fullname: index-t2-png;
   // mime: image/png;
-  // hash: f6b7ae43e310666d33cc1405031c5d48;
+  // hash: dffdc9296d2350434602753db821328f;
   background-image: image-url('index-t2.png');
 }
 
@@ -1228,6 +1327,22 @@ $compass-imagehelper-imagesmap: (
   background-image: image-url('menuBtn.png');
 }
 
+%menuBtn2-png {
+  // Available properties:
+  // prefix: ;
+  // width: 80;
+  // height: 82;
+  // filename: menuBtn2.png;
+  // basename: menuBtn2;
+  // dirname: images;
+  // ext: .png;
+  // path: menuBtn2.png;
+  // fullname: menuBtn2-png;
+  // mime: image/png;
+  // hash: d0ba71f098ea9fc3be5bae1f54f42e40;
+  background-image: image-url('menuBtn2.png');
+}
+
 %menuBtnCloz-png {
   // Available properties:
   // prefix: ;
@@ -1242,6 +1357,22 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: 3b6a9658b75d43ca30548484d84cf330;
   background-image: image-url('menuBtnCloz.png');
+}
+
+%menuBtnCloz2-png {
+  // Available properties:
+  // prefix: ;
+  // width: 80;
+  // height: 79;
+  // filename: menuBtnCloz2.png;
+  // basename: menuBtnCloz2;
+  // dirname: images;
+  // ext: .png;
+  // path: menuBtnCloz2.png;
+  // fullname: menuBtnCloz2-png;
+  // mime: image/png;
+  // hash: a5b9d72774dd53a307ccb38a9be25397;
+  background-image: image-url('menuBtnCloz2.png');
 }
 
 %p2-pop1-png {
@@ -1368,7 +1499,7 @@ $compass-imagehelper-imagesmap: (
   // path: p3-t3.png;
   // fullname: p3-t3-png;
   // mime: image/png;
-  // hash: 696c0cbe1e0f789240ff8c7c764850c0;
+  // hash: 68a068e55484e2c0a70cda1270fdefd2;
   background-image: image-url('p3-t3.png');
 }
 
@@ -1626,6 +1757,22 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: 577af78f0c9b81158d84ebd0ccbfd9fb;
   background-image: image-url('pro-title-3.png');
+}
+
+%pro-gif {
+  // Available properties:
+  // prefix: ;
+  // width: 277;
+  // height: 364;
+  // filename: pro.gif;
+  // basename: pro;
+  // dirname: images;
+  // ext: .gif;
+  // path: pro.gif;
+  // fullname: pro-gif;
+  // mime: image/gif;
+  // hash: 68bb26f38ba35c6c427c0bbbbcd4cc3d;
+  background-image: image-url('pro.gif');
 }
 
 %pro1-badge-gif {

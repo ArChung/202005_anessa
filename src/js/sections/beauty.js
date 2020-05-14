@@ -16,7 +16,7 @@ function init_beauty_Slider() {
     grabCursor: true,
     speed: 800,
     autoplay: {
-      delay: 2000,
+      delay: 800,
     }
   })
 }

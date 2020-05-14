@@ -80,10 +80,11 @@ body
         transform: translate(-50%, -50%)
         opacity: 0
       &:hover
-        color: #fffb8b
-        &:after
-          opacity: 1
-          transform: translate(0%, -50%)
+        +pc
+          color: #fffb8b
+          &:after
+            opacity: 1
+            transform: translate(0%, -50%)
 
 
   flex-direction: column

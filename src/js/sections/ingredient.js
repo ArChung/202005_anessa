@@ -10,7 +10,7 @@ function init_ingredient() {
 function init_ingredient_video() {
   const video = $('#ingredient-video')[0];
   const txt = $('#ingredient-section .videoTitle');
-  const breaktime = 3;
+  const breaktime = .6;
   let fire = false;
 
   video.load();
@@ -19,15 +19,18 @@ function init_ingredient_video() {
   inView('#ingredient-section .videoBox')
     .once('enter', () => {
       txt.addClass('show');
-      video.play();
+      setTimeout(() => {
+        txt.removeClass('show');
+        video.play();
+      }, 3000);
     })
 
-  video.ontimeupdate = () => {
-    if (video.currentTime > breaktime && !fire) {
-      txt.removeClass('show');
-      fire = true;
-    }
-  }
+  // video.ontimeupdate = () => {
+  //   if (video.currentTime > breaktime && !fire) {
+  //     txt.removeClass('show');
+  //     fire = true;
+  //   }
+  // }
 }
 
 

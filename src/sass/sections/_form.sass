@@ -18,7 +18,7 @@
     position: relative
     
     .product
-      +bg('form-pro.png')
+      +bg('pro.gif')
       position: absolute
       left: -20px
       transform: translate(-100%, -20px)
@@ -94,12 +94,15 @@
               align-items: center
               font-size: 19px
               flex-shrink: 0
+              +phone 
+                font-size: 24px
+                height: 50px
             .locations
               flex: 1
               overflow: scroll
               overflow-x: hidden
               +phone
-                max-height: 450px
+                max-height: 300px
               .location-item
                 display: flex
                 padding: 20px 25px
@@ -111,12 +114,18 @@
                 .store-name
                   font-size: 17px
                   font-weight: bold
+                  +phone 
+                    font-size: 22px
                 .store-addr
                   font-size: 14px
                   margin-top: 4px
+                  +phone 
+                    font-size: 18px
                 .store-phone
                   font-size: 14px
                   margin-top: 4px
+                  +phone 
+                    font-size: 18px
 
 
 
@@ -143,12 +152,18 @@
           .store-name
             font-size: 19px
             font-weight: bold
+            +phone
+              font-size: 22px
           .store-addr
             font-size: 16px
             margin-top: 8px
+            +phone
+              font-size: 18px
           .store-phone
             font-size: 14px
             margin-top: 8px
+            +phone
+              font-size: 18px
 
         .inputWrap
           margin-top: 15px
@@ -167,8 +182,7 @@
           justify-content: space-between
           margin-top: 25px
           +phone
-            .form-btn
-              width: 48%
+            flex-direction: column
 
       &.fc-3
         .f-title

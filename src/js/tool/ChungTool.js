@@ -2,7 +2,7 @@ var ChungTool = ChungTool || {};
 var simpleShow = simpleShow || {};
 var simpleHide = simpleHide || {};
 
-(function() {
+(function () {
 
 
 
@@ -43,7 +43,7 @@ var simpleHide = simpleHide || {};
         if (isNull(during)) {
             during = 0.3;
         }
-        el.each(function() {
+        el.each(function () {
             var t = $(this);
             t.removeClass('hide');
             TweenMax.killTweensOf(t);
@@ -61,26 +61,26 @@ var simpleHide = simpleHide || {};
         if (isNull(during)) {
             during = 0.3;
         }
-        el.each(function() {
-                var t = $(this);
-                var tl = new TimelineMax();
-                TweenMax.killTweensOf(t);
-                tl.to(t, during, {
-                        autoAlpha: 0
-                    })
-                    .call(function() {
-                        t.addClass('hide');
-                    });
-            })
-            // console.log(123)
+        el.each(function () {
+            var t = $(this);
+            var tl = new TimelineMax();
+            TweenMax.killTweensOf(t);
+            tl.to(t, during, {
+                    autoAlpha: 0
+                })
+                .call(function () {
+                    t.addClass('hide');
+                });
+        })
+        // console.log(123)
     }
 
     function isNull(val) {
-        return (typeof(val) === "undefined")
+        return (typeof (val) === "undefined")
     }
 
     function initLimitText() {
-        $('.limitTxt').each(function() {
+        $('.limitTxt').each(function () {
             var t = $(this);
             var limitNum = parseInt(t.attr('data-limitTxtNum'), 10);
             var showBtn = (t.attr('data-showBtn') == 'true') ? true : false;
@@ -105,7 +105,7 @@ var simpleHide = simpleHide || {};
             }
         });
 
-        $('.seeMoreContentBtn').on('click', function(e) {
+        $('.seeMoreContentBtn').on('click', function (e) {
             e.preventDefault();
             $(this).addClass('hide').siblings('.hide').removeClass('hide').siblings('.dot').addClass('hide');
         });
@@ -157,8 +157,8 @@ var simpleHide = simpleHide || {};
 
     /* 清除以prefix開頭的所有class*/
     function removeClassWithFilter(elemt, prefix) {
-        elemt.each(function(i, el) {
-            var classes = el.className.split(" ").filter(function(c) {
+        elemt.each(function (i, el) {
+            var classes = el.className.split(" ").filter(function (c) {
                 return c.lastIndexOf(prefix, 0) !== 0;
             });
             el.className = $.trim(classes.join(" "));
@@ -168,13 +168,13 @@ var simpleHide = simpleHide || {};
     /* 回傳以prefix開頭的class拿掉以prefix開頭後的文字*/
     function returnClassNameWithFilter(elemt, prefix) {
         var arr;
-        elemt.each(function(i, el) {
-            arr = el.className.split(" ").filter(function(c) {
+        elemt.each(function (i, el) {
+            arr = el.className.split(" ").filter(function (c) {
                 return c.lastIndexOf(prefix, 0) == 0;
             });
         });
 
-        $.each(arr, function(index, value) {
+        $.each(arr, function (index, value) {
             arr[index] = value.replace(prefix, "");
         })
         return arr;
@@ -192,7 +192,7 @@ var simpleHide = simpleHide || {};
     }
 
     function maxlengthInpout(el, num) {
-        el.on('keyup', function() {
+        el.on('keyup', function () {
             //get the limit from maxlength attribute  
             var limit = num;
             //get the current text inside the textarea  
@@ -257,12 +257,12 @@ var simpleHide = simpleHide || {};
         return element;
     };
 
-   function shareToLine(s) {
+    function shareToLine(s) {
         var element = getAtagElement();
         element.href = 'http://line.naver.jp/R/msg/text/?' + encodeURIComponent(s);
-        
+
         element.click();
-        
+
     }
 
     function pageScrollAni(top) {
@@ -317,6 +317,7 @@ var simpleHide = simpleHide || {};
     function windoePosTop() {
         return typeof window.pageYOffset != 'undefined' ? window.pageYOffset : document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;
     }
+
     function addSwipeUpDownEvent(el, upFunc, downFunc) {
         // var touchObj = document.getElementById("index_banner_swipe");
         var start_y;
@@ -367,7 +368,7 @@ var simpleHide = simpleHide || {};
 
 
 
-        el.mousewheel(function(event) {
+        el.mousewheel(function (event) {
             // console.log(event.deltaX, event.deltaY, event.deltaFactor);
 
             if (timer) {
@@ -376,7 +377,7 @@ var simpleHide = simpleHide || {};
 
             }
 
-            timer = setTimeout(function() {
+            timer = setTimeout(function () {
                 // console.log('done');
                 timer = null;
                 scrollable = true;
@@ -402,31 +403,48 @@ var simpleHide = simpleHide || {};
 
     }
 
+    // function isIe() {
+    //     if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+
+    //         return true;
+    //     } else {
+
+    //         return false;
+    //     }
+
+    // }
+
     function isIe() {
-        if (document.documentMode || /Edge/.test(navigator.userAgent)) {
 
-            return true;
-        } else {
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
 
-            return false;
-        }
+        // if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer, return version number
+        // {
+        //     alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+        // } else // If another browser, return 0
+        // {
+        //     alert('otherbrowser');
+        // }
 
+        return (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./));
     }
 
     function scrollReachEnd(el) {
         return (el.scrollTop() + el.innerHeight() >= el[0].scrollHeight)
     }
+
     function scrollReachTop(el) {
-        return (el.scrollTop() ==0)
+        return (el.scrollTop() == 0)
     }
 
 
-    function checkIdle(delay,func,func2) {
+    function checkIdle(delay, func, func2) {
         idleTimer = null;
         idleState = false;
         idleWait = delay;
 
-        $('*').bind('touchend touchmove touchstart', function() {
+        $('*').bind('touchend touchmove touchstart', function () {
 
 
             clearTimeout(idleTimer);
@@ -437,7 +455,7 @@ var simpleHide = simpleHide || {};
 
             idleState = false;
 
-            idleTimer = setTimeout(function() {
+            idleTimer = setTimeout(function () {
 
                 // Idle Event
                 func();
@@ -459,9 +477,9 @@ var simpleHide = simpleHide || {};
         element.click();
     }
 
-    
+
     ChungTool.openGoogleApp = openGoogleApp;
-    
+
     ChungTool.checkIdle = checkIdle;
     ChungTool.scrollReachTop = scrollReachTop;
     ChungTool.scrollReachEnd = scrollReachEnd;

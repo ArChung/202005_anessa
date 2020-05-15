@@ -2,8 +2,31 @@ function init_index() {
   init_index_video();
   init_index_intro();
   waitIndexImgs();
+  // init_video_size();
+
+  // $(window).on('resize',()=>{
+  //   init_video_size();
+  // })
 }
 
+function init_video_size(){
+  let newRate;
+
+  const momWidth = $('#index-section .back-bg').width();
+  const momHeight = $('#index-section .back-bg').height();
+  const childWidth = $('#index-section .videoWrap').width();
+  const childHeight = $('#index-section .videoWrap').height();
+  console.log(momWidth,momHeight,childWidth,childHeight);
+
+
+  if(momWidth/momHeight > 1980/1080){
+    newRate = momHeight/childHeight;
+  }else{
+    newRate = momWidth/childWidth;
+  }
+  console.log(momWidth/momHeight > 1980/1080);
+  $('#index-section .videoWrap').css({'width': `${1980 * newRate}%`})
+}
 
 function init_index_video() {
   const index_video = $('#index-video-bg')[0];

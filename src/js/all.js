@@ -3,7 +3,12 @@ init_base();
 
 
 inView.offset(150);
+console.log(456);
+console.log(ChungTool.isIe());
 
+if(ChungTool.isIe()){
+  alert('ie')
+}
 
 $(document).ready(() => {
 

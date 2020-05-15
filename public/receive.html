@@ -6,21 +6,21 @@
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <!-- <meta http-equiv=“X-UA-Compatible” content="chrome=1" /> -->
-  <title> 首頁 </title>
+  <title> 領取 </title>
   <!-- hiding the Browser’s User Interface -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <!-- iOS 6 -->
   <meta name="apple-mobile-web-app-title" content="">
   <!-- meta start -->
-  <meta name="title" content="首頁" />
+  <meta name="title" content="領取" />
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="copyright" content="" />
   <link rel="image_src" href="" />
 
   <!-- OG -->
-  <meta property="og:title" content="首頁" />
+  <meta property="og:title" content="領取" />
   <meta property="og:site_name" content="" />
   <meta property="og:description" content="" />
   <meta property="og:type" content="website" />
@@ -30,31 +30,16 @@
 
   <!-- CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/all.css">
 </head>
 
 <body>
 
-  <!-- navbar -->
-  <div class="header" id='header'>
-  <div class="menuBtn"></div>
-  <div class="logo"></div>
-  <div class="space"></div>
-</div>
-
-<a href="#" id="event-btn">
-  <div class="bg"></div>
-  <div class="pro"></div>
-</a>
-
-<div id="top-btn">
-</div>
-  <!-- navbar END -->
+  
 
 
 
 
-  <div class="mainContainer panel" id='mainContainer'>
+  <div class="mainContainer" id='mainContainer'>
 
     <!-- contents -->
     
@@ -451,65 +436,15 @@
   </div>
 </section>
     <!-- contents END -->
-
-    <!-- footer -->
-    <footer class="footer">
-  <div class="txt">Copyright © Shiseido Japan Co.,Ltd. All Rights Reserved</div>
-</footer>
-    <!-- footer END -->
-
   </div>
 
-  <div id="modal" class="modal">
-    <p>請選擇電商</p>
-    <div class="store-btns">
-      <a href="#" target='_blank' class="store-btn">
-        <img src="./images/store-1.jpg" alt="">
-      </a>
-      <a href="#" target='_blank' class="store-btn">
-        <img src="./images/store-2.jpg" alt="">
-      </a>
-      <a href="#" target='_blank' class="store-btn">
-        <img src="./images/store-3.png" alt="">
-      </a>
-    </div>
-  </div>
 
-  <nav id="menu" class="menu" >
-  <ul class="menu-section-list">
-    <li data-url='index'>首頁</li>
-    <li data-url='ingredient'>成分超進化</li>
-    <li data-url='ingredient2'>美肌保濕成分</li>
-    <li data-url='products'>入手安耐曬</li>
-    <li data-url='beauty'>美肌神人開箱</li>
-    <li data-url='form'>免費體驗衝一波</li>
-  </ul>
-</nav>
 
   <!-- js -->
-  <script>
-    var ua = window.navigator.userAgent;
-    var msie = ua.indexOf("MSIE ");
-    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
-      alert('請使用 chrome 或 safari 以獲得最佳體驗')
-    }
-  </script>
-  <script src="js/vendor.js"></script>
-  <script src="js/all.js"></script>
+  
   <!-- js END-->
 
-  <!-- for engineer -->
-  <script>
-    // 表單下一步
-    $('#form-section .btn-next').on('click', function () {
-      form_next();
-    })
-
-    // 表單上一步
-    $('#form-section .btn-prev').on('click', function () {
-      form_prev();
-    })
-  </script>
+  
 </body>
 
 </html>

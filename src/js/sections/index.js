@@ -15,6 +15,7 @@ function init_index_video() {
   index_video.oncanplay = () => {
     if (ChungTool.isPhone()) {
       index_video.currentTime = breaktime;
+      index_video.play();
     }
   }
 

@@ -9,13 +9,12 @@ function init_ingredient2() {
 
 function init_ingredient2_animation() {
   
-  // if(ChungTool.isPhone())return;
+  if(ChungTool.isPhone())return;
 
   // Motus.addAnimation(new Motus.Animation({
-  //   $el: $('#ingredient2-section')[0],
+  //   $el: $('#ingredient2-section .sun')[0],
   //   keyframes: [
-  //     {backgroundPositionX: '50%'},
-  //     {backgroundPositionX: '0%'}
+  //     {rotation: '30deg'},
   //   ],
   // }));
 }

@@ -33,14 +33,14 @@ function init_beauty_animation() {
     }, ],
   }));
 
-  Motus.addAnimation(new Motus.Animation({
-    $el: $('#beauty-section')[0],
-    keyframes: [{
-        backgroundPositionX: 0
-      },
-      {
-        backgroundPositionX: 100
-      }
-    ],
-  }));
+  // Motus.addAnimation(new Motus.Animation({
+  //   $el: $('#beauty-section')[0],
+  //   keyframes: [{
+  //       backgroundPositionX: 0
+  //     },
+  //     {
+  //       backgroundPositionX: 100
+  //     }
+  //   ],
+  // }));
 }

@@ -40,6 +40,20 @@
   to
     transform: translate(0px,0)
 
+=arr_animation3
+  animation-name: arr3
+  animation-duration: 1s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
+
+@keyframes arr3
+  from
+    transform: translate(0px,0)
+  50%
+    transform: translate(-7px,0)
+  to
+    transform: translate(0px,0)
+
 .products
   min-height: calc(100vh -100px)
   display: flex
@@ -56,8 +70,6 @@
       z-index: 10
       cursor: pointer
       display: none
-      +pad
-        display: block
     .swiper-btn-prev
       +bg('arrLeft2.png')
       left: 25px
@@ -152,15 +164,16 @@
         cursor: pointer
         position: relative
         margin-top: 15px
-        +bg('btn-1.gif')
+        +bg('btn-1.png')
         @if ($id == 3)
-          +bg('btn-2.gif')
+          +bg('btn-2.png')
         &:after
           content: ''
           right: 15px
           top: 17px
           position: absolute
           +bg('buyTxt.png')
+          +arr_animation3
 
       .more
         align-self: start

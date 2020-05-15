@@ -10,27 +10,33 @@ function init_ingredient() {
 function init_ingredient_video() {
   const video = $('#ingredient-video')[0];
   const txt = $('#ingredient-section .videoTitle');
-  const breaktime = .6;
+  const breaktime = 2;
   let fire = false;
 
   video.load();
 
 
   inView('#ingredient-section .videoBox')
-    .once('enter', () => {
+    .on('enter', () => {
       txt.addClass('show');
       setTimeout(() => {
-        txt.removeClass('show');
+        video.currentTime = 0;
         video.play();
-      }, 3000);
+      }, 1000);
+    }).on('exit', () => {
+      txt.addClass('show');
+      setTimeout(() => {
+        video.currentTime = 0;
+        video.pause();
+      }, 1000);
     })
 
-  // video.ontimeupdate = () => {
-  //   if (video.currentTime > breaktime && !fire) {
-  //     txt.removeClass('show');
-  //     fire = true;
-  //   }
-  // }
+  video.ontimeupdate = () => {
+    if (video.currentTime > breaktime ) {
+      txt.removeClass('show');
+      // fire = true;
+    }
+  }
 }
 
 

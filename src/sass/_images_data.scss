@@ -208,13 +208,13 @@ $compass-imagehelper-imagesmap: (
   ),
   'bg4.jpg': (
     width: '1600',
-    height: '760',
-    hash: '2529a5b955b364e46f421d75f6306115'
+    height: '761',
+    hash: '0cc56fa131ab13efb6d29448ed068aa1'
   ),
   'bg5.jpg': (
     width: '1600',
     height: '763',
-    hash: '67c961e136f8de808c66d264dd914d2b'
+    hash: '1bc27c015bf75803e3c1e7a6806237a5'
   ),
   'btn-1.gif': (
     width: '400',
@@ -536,6 +536,11 @@ $compass-imagehelper-imagesmap: (
     height: '56',
     hash: '11e3c1f1b1df16fbf1550d7bda3eb459'
   ),
+  'sunlights.png': (
+    width: '601',
+    height: '481',
+    hash: '249ccdcbf9e1e2561a3133875af60cd3'
+  ),
   'topBtn.png': (
     width: '50',
     height: '160',
@@ -803,7 +808,7 @@ $compass-imagehelper-imagesmap: (
   // Available properties:
   // prefix: ;
   // width: 1600;
-  // height: 760;
+  // height: 761;
   // filename: bg4.jpg;
   // basename: bg4;
   // dirname: images;
@@ -811,7 +816,7 @@ $compass-imagehelper-imagesmap: (
   // path: bg4.jpg;
   // fullname: bg4-jpg;
   // mime: image/jpeg;
-  // hash: 2529a5b955b364e46f421d75f6306115;
+  // hash: 0cc56fa131ab13efb6d29448ed068aa1;
   background-image: image-url('bg4.jpg');
 }
 
@@ -827,7 +832,7 @@ $compass-imagehelper-imagesmap: (
   // path: bg5.jpg;
   // fullname: bg5-jpg;
   // mime: image/jpeg;
-  // hash: 67c961e136f8de808c66d264dd914d2b;
+  // hash: 1bc27c015bf75803e3c1e7a6806237a5;
   background-image: image-url('bg5.jpg');
 }
 
@@ -1853,6 +1858,22 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: 11e3c1f1b1df16fbf1550d7bda3eb459;
   background-image: image-url('store-3.png');
+}
+
+%sunlights-png {
+  // Available properties:
+  // prefix: ;
+  // width: 601;
+  // height: 481;
+  // filename: sunlights.png;
+  // basename: sunlights;
+  // dirname: images;
+  // ext: .png;
+  // path: sunlights.png;
+  // fullname: sunlights-png;
+  // mime: image/png;
+  // hash: 249ccdcbf9e1e2561a3133875af60cd3;
+  background-image: image-url('sunlights.png');
 }
 
 %topBtn-png {

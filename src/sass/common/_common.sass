@@ -34,6 +34,29 @@
   > *:first-child
     position: relative
 
+=sunAni
+  animation-name: sun
+  animation-duration: .1s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
+
+@keyframes sun
+  from
+    opacity: 1
+  50%
+    opacity: 0.95
+  to
+    opacity: 1
+
+=addSun 
+  position: relative
+  overflow: hidden
+  &:after
+    content: ''
+    position: absolute
+    top: -50px
+    right: -250px
+    +bg('sunlights.png')
 
 .mainContainer
   overflow: hidden
@@ -69,17 +92,20 @@
   z-index: 100
   will-change: transform
   transform: translate(100%, 0)
+  transform-origin: 100% 50%
   +dTime(.8s)
-
+  +pad
+    transform: translate(100%, 0) scale(0.8)
   .bg
-    +bg('index-pro2.png')
+    +bg('index-pro2-1.png')
   
   .pro
-    +bg('index-pro0-1.gif')
+    +bg('index-pro0.gif')
     
   &.show
     transform: translate(0%, 0)
-
+    +pad
+      transform: translate(0%, 0) scale(0.75)
 
 .custom-select
   position: relative

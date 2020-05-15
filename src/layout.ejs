@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- <meta http-equiv=“X-UA-Compatible” content="chrome=1" /> -->
   <title> <%- title %> </title>
   <!-- hiding the Browser’s User Interface -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,6 +27,8 @@
   <meta property="og:image" content="" />
   <meta property="og:url" content="" />
   <meta property="fb:app_id" content="" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.8.7/polyfill.min.js"></script>
   <!-- CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
 
@@ -77,6 +80,7 @@
   <% include views/sider %>
 
   <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js" integrity="sha256-zSpX/F9KKuk1nLBq2vygsdDm6QrSbVdn5lteMkdzWdk=" crossorigin="anonymous"></script>
   <script src="js/vendor.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script> -->
   <script src="js/all.js"></script>

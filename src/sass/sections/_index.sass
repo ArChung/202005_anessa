@@ -2,10 +2,10 @@
 .index
   width: 100%
   position: relative
-  height: calc(100vh - 100px)
-  // +phone
-  //   +ratio(750,1000)
-  //   height: auto
+  height: 100%
+  +phone
+    +ratio(750,1000)
+    height: auto
   
 
   .back-bg
@@ -94,7 +94,7 @@
       +phone 
         right: 0px
         top: auto
-        bottom: 390px
+        bottom: 130px
         transform: translate(0%, 0%) scale(.8)
         transform-origin: 100% 100%
       .t1

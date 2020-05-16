@@ -3,7 +3,7 @@
   position: fixed
   top: 0
   left: 0
-  height: 100px
+  height: 80px
   z-index: 50
   background-color: white
   display: flex
@@ -28,6 +28,7 @@
     +bg('logo.png')
     position: absolute
     left: 50%
-    transform: translateX(-50%)
-
+    transform: translateX(-50%) scale(.8)
+    +phone  
+      transform: translateX(-50%) scale(.8)
 

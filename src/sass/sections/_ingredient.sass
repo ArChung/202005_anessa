@@ -30,7 +30,7 @@
 
   .content
     display: flex
-    align-items: flex-end
+    align-items: center
     margin-top: 30px
     max-width: 100%
     padding-left: 40px
@@ -43,6 +43,7 @@
       width: 846px
       z-index: 5
       max-width: 100%
+      top: 50px
       +phone 
         width: 92%
         align-self: start
@@ -53,6 +54,7 @@
         top: 7px
         left: -8px
         z-index: 2
+        pointer-events: none
       .videoBox
         overflow: hidden
         width: 100%
@@ -62,11 +64,11 @@
         left: 1px
       .videoTitle
         position: absolute
-        top: 15%
+        top: -20px
         left: 50%
-        transform: translate(-50%, 0)
+        transform: translate(-50%, -100%)
         +dTime
-        opacity: 0
+        opacity: 1
         z-index: 4
         max-width: 80%
         &.show
@@ -90,7 +92,7 @@
       padding: 80px 40px 80px 80px
       align-items: center
       position: relative
-      top: -40px
+      top: -60px
       left: -40px
       +phone 
         top: 0

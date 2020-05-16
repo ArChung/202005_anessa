@@ -4,7 +4,7 @@
   position: relative
   height: calc(100vh - 80px)
   +phone
-    +ratio(750,1000)
+    // +ratio(750,1000)
     height: auto
   
 
@@ -23,7 +23,19 @@
       height: 100%
       object-fit: cover
       object-position: 50% 0%
-      
+
+    .moblie-index
+      display: none
+      img
+        display: block
+        width: 100%
+    +phone
+      position: relative
+      .video-bg
+        display: none
+      .moblie-index
+        +phone
+          display: block
 
   .front-wrap
     +full
@@ -40,12 +52,11 @@
         transform: translate(0%, 0%) scale(.6)
         transform-origin: 0% 0%
       +phone 
-        // right: 15px
-        // top: 40%
-        left: 30px
-        top: 0%
-        transform: translate(0%, 0%) scale(.8)
-        transform-origin: 0% 50%
+        // left: 10px
+        // top: 30px
+        // transform: translate(0%, 0%) scale(.7)
+        // transform-origin: 0% 0%
+        display: none
 
       .txt-content  
         +aniPicsWrap
@@ -76,11 +87,12 @@
         transform: translate(0%, 0%) scale(.4)
         right: 30px
       +phone 
-        right: 0px
-        top: auto
-        bottom: 130px
-        transform: translate(0%, 0%) scale(.8)
-        transform-origin: 100% 100%
+        // right: 9px
+        // top: auto
+        // bottom: 120px
+        // transform: translate(0%, 0%) scale(.7)
+        // transform-origin: 100% 100%
+        display: none
       .t1
         +bg('index-tt1.png')
 

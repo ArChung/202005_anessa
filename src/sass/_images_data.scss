@@ -196,6 +196,11 @@ $compass-imagehelper-imagesmap: (
     height: '939',
     hash: '7c681f8d2ae61ee0484938d575bb713f'
   ),
+  'bg3-02.jpg': (
+    width: '2343',
+    height: '1019',
+    hash: '260c7b754899cf74af81a7ec803da28b'
+  ),
   'bg3-moblie.jpg': (
     width: '750',
     height: '1115',
@@ -385,6 +390,16 @@ $compass-imagehelper-imagesmap: (
     width: '80',
     height: '79',
     hash: 'a5b9d72774dd53a307ccb38a9be25397'
+  ),
+  'moblie_index.jpg': (
+    width: '750',
+    height: '897',
+    hash: '6a259744860f6118b0579f5631a1134f'
+  ),
+  'moblie_index_without_txt.jpg': (
+    width: '750',
+    height: '897',
+    hash: '642c3ea7b7fdd88ac22146bad1c1d4b6'
   ),
   'p2-pop1.png': (
     width: '386',
@@ -770,6 +785,22 @@ $compass-imagehelper-imagesmap: (
   // mime: image/jpeg;
   // hash: 7c681f8d2ae61ee0484938d575bb713f;
   background-image: image-url('bg2.jpg');
+}
+
+%bg3-02-jpg {
+  // Available properties:
+  // prefix: ;
+  // width: 2343;
+  // height: 1019;
+  // filename: bg3-02.jpg;
+  // basename: bg3-02;
+  // dirname: images;
+  // ext: .jpg;
+  // path: bg3-02.jpg;
+  // fullname: bg3-02-jpg;
+  // mime: image/jpeg;
+  // hash: 260c7b754899cf74af81a7ec803da28b;
+  background-image: image-url('bg3-02.jpg');
 }
 
 %bg3-moblie-jpg {
@@ -1378,6 +1409,38 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: a5b9d72774dd53a307ccb38a9be25397;
   background-image: image-url('menuBtnCloz2.png');
+}
+
+%moblie_index-jpg {
+  // Available properties:
+  // prefix: ;
+  // width: 750;
+  // height: 897;
+  // filename: moblie_index.jpg;
+  // basename: moblie_index;
+  // dirname: images;
+  // ext: .jpg;
+  // path: moblie_index.jpg;
+  // fullname: moblie_index-jpg;
+  // mime: image/jpeg;
+  // hash: 6a259744860f6118b0579f5631a1134f;
+  background-image: image-url('moblie_index.jpg');
+}
+
+%moblie_index_without_txt-jpg {
+  // Available properties:
+  // prefix: ;
+  // width: 750;
+  // height: 897;
+  // filename: moblie_index_without_txt.jpg;
+  // basename: moblie_index_without_txt;
+  // dirname: images;
+  // ext: .jpg;
+  // path: moblie_index_without_txt.jpg;
+  // fullname: moblie_index_without_txt-jpg;
+  // mime: image/jpeg;
+  // hash: 642c3ea7b7fdd88ac22146bad1c1d4b6;
+  background-image: image-url('moblie_index_without_txt.jpg');
 }
 
 %p2-pop1-png {

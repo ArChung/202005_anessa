@@ -2,45 +2,17 @@ function init_index() {
   init_index_video();
   init_index_intro();
   waitIndexImgs();
-  // init_video_size();
-
-  // $(window).on('resize',()=>{
-  //   init_video_size();
-  // })
+  init_phone_eventBtn_position();
 }
 
-function init_video_size(){
-  let newRate;
-
-  const momWidth = $('#index-section .back-bg').width();
-  const momHeight = $('#index-section .back-bg').height();
-  const childWidth = $('#index-section .videoWrap').width();
-  const childHeight = $('#index-section .videoWrap').height();
-  console.log(momWidth,momHeight,childWidth,childHeight);
-
-
-  if(momWidth/momHeight > 1980/1080){
-    newRate = momHeight/childHeight;
-  }else{
-    newRate = momWidth/childWidth;
-  }
-  console.log(momWidth/momHeight > 1980/1080);
-  $('#index-section .videoWrap').css({'width': `${1980 * newRate}%`})
-}
 
 function init_index_video() {
+  if (ChungTool.isPhone()) return
+
   const index_video = $('#index-video-bg')[0];
   const breaktime = 1.7;
   let fire = false;
 
-
-
-  index_video.oncanplay = () => {
-    if (ChungTool.isPhone()) {
-      index_video.currentTime = breaktime;
-      index_video.play();
-    }
-  }
 
   index_video.ontimeupdate = () => {
     if (index_video.currentTime > breaktime && !fire) {
@@ -53,8 +25,51 @@ function init_index_video() {
     index_video.currentTime = breaktime;
     index_video.play();
   }
+
+  index_video.play();
+
 }
 
+function init_phone_eventBtn_position() {
+  if (!ChungTool.isPhone()) return
+
+  window.onscroll = function () {
+    if (window.pageYOffset < 100) {
+
+      adjuctPos();
+
+    } else {
+
+      $('#event-btn').css({
+        'top': '100%',
+        'margin-top': '0px'
+      });
+      $('#event-btn').removeClass('in-index');
+    }
+  }
+
+  $('#event-btn').addClass('show');
+
+  adjuctPos();
+
+  function adjuctPos() {
+    if ($('#event-btn').hasClass('in-index')) return;
+
+    console.log(46546546546);
+    const indexHeight = $('#index-section').height();
+    const screenHeight = document.documentElement.clientHeight;
+    const headerHeight = $('#header').height();
+    const btnHeight = $('#event-btn').height();
+    if (screenHeight > indexHeight + btnHeight / 3 + headerHeight) {
+      $('#event-btn').css({
+        'top': (indexHeight + headerHeight) / screenHeight * 100 + '%',
+        'margin-top': btnHeight / 3 + 'px'
+      })
+    }
+
+    $('#event-btn').addClass('in-index')
+  }
+}
 
 function waitIndexImgs() {
   $('#index-section').imagesLoaded({
@@ -71,7 +86,7 @@ function waitIndexImgs() {
 
 
 function init_index_intro() {
-  if(ChungTool.isPhone())return
+  if (ChungTool.isPhone()) return
 
   gsap.set('#index-section .aniTxt,#index-section .aniTxt2', {
     scale: 2.5,
@@ -81,13 +96,13 @@ function init_index_intro() {
 
 
 function index_play_intro() {
-  if(ChungTool.isPhone())return
+  if (ChungTool.isPhone()) return
 
   let delay = 0;
 
   $('.aniTxt').each((index, el) => {
     delay = (index === 2) ? delay + .6 : delay + .2;
-    drop($(el),delay)
+    drop($(el), delay)
   })
 
 

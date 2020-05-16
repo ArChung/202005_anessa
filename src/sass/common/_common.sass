@@ -95,15 +95,15 @@ html,bidy
 #event-btn
   +aniPicsWrap
   position: fixed
-  bottom: 15px
+  top: 100%
   right: 0
   z-index: 100
   will-change: transform
-  transform: translate(100%, 0)
+  transform: translate(100%, calc(-100% - 15px))
   transform-origin: 100% 100%
   +dTime(.8s)
   +pad
-    transform: translate(100%, 0) scale(0.8)
+    transform: translate(100%, calc(-100% - 15px)) scale(0.8)
   .bg
     +bg('index-pro2-1.png')
   
@@ -111,10 +111,10 @@ html,bidy
     +bg('index-pro0.gif')
     
   &.show
-    transform: translate(0%, 0)
+    transform: translate(0%, calc(-100% - 15px))
     +pad
-      transform: translate(0%, 0) scale(0.75)
-
+      transform: translate(0%, calc(-100% - 15px)) scale(0.75)
+  
 .custom-select
   position: relative
   display: block

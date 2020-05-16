@@ -94,6 +94,8 @@
     display: flex
     justify-content: center
     align-items: center
+    +smallHeight
+      padding: 0
     +phone
       padding: 150px 0
     @if ($id == 3)
@@ -103,6 +105,8 @@
       flex-direction: column
       display: flex
       align-items: center
+      +smallHeight
+        transform: scale(.7)
       +phone
         transform: scale(1.25)
       .pro-title

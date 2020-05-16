@@ -461,6 +461,11 @@ $compass-imagehelper-imagesmap: (
     height: '992',
     hash: 'e32ba7d92f78363930e9d08996a004c3'
   ),
+  'playBtn.png': (
+    width: '113',
+    height: '141',
+    hash: 'b68b996ed02ddf776e3f75753b99249d'
+  ),
   'pro-1.png': (
     width: '135',
     height: '256',
@@ -479,7 +484,7 @@ $compass-imagehelper-imagesmap: (
   'pro-feature-1.png': (
     width: '399',
     height: '129',
-    hash: '1849634f51e5fdf47e3253d258bdd7ae'
+    hash: 'b898d35e66e292d765bc3d434b401bc1'
   ),
   'pro-feature-2.png': (
     width: '399',
@@ -1635,6 +1640,22 @@ $compass-imagehelper-imagesmap: (
   background-image: image-url('pbg-2.jpg');
 }
 
+%playBtn-png {
+  // Available properties:
+  // prefix: ;
+  // width: 113;
+  // height: 141;
+  // filename: playBtn.png;
+  // basename: playBtn;
+  // dirname: images;
+  // ext: .png;
+  // path: playBtn.png;
+  // fullname: playBtn-png;
+  // mime: image/png;
+  // hash: b68b996ed02ddf776e3f75753b99249d;
+  background-image: image-url('playBtn.png');
+}
+
 %pro-1-png {
   // Available properties:
   // prefix: ;
@@ -1695,7 +1716,7 @@ $compass-imagehelper-imagesmap: (
   // path: pro-feature-1.png;
   // fullname: pro-feature-1-png;
   // mime: image/png;
-  // hash: 1849634f51e5fdf47e3253d258bdd7ae;
+  // hash: b898d35e66e292d765bc3d434b401bc1;
   background-image: image-url('pro-feature-1.png');
 }
 

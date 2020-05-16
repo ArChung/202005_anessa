@@ -18,23 +18,32 @@ function init_ingredient_video() {
 
   inView('#ingredient-section .videoBox')
     .on('enter', () => {
-      // txt.addClass('show');
-      // setTimeout(() => {
-      //   video.currentTime = 0;
-      //   video.play();
-      // }, 1000);
+
     }).on('exit', () => {
-      
-      if(!video.paused){
+
+      if (!video.paused) {
         video.pause();
       }
-      // txt.addClass('show');
-      // setTimeout(() => {
-      //   video.currentTime = 0;
-      //   video.pause();
-      // }, 1000);
+
     })
 
+
+  video.onpause = () => {
+    $('#ingredient-section .videoPlayBtn').addClass('show');
+  }
+
+  video.onplay = () => {
+    $('#ingredient-section .videoPlayBtn').removeClass('show');
+  }
+
+  $('#ingredient-section .videoPlayBtn').click(function () {
+    if (!video.paused) {
+      video.pause();
+    } else {
+      video.play();
+    }
+
+  });
   // video.ontimeupdate = () => {
   //   if (video.currentTime > breaktime ) {
   //     txt.removeClass('show');
@@ -45,8 +54,8 @@ function init_ingredient_video() {
 
 
 function init_ingredient_animation() {
-  if(ChungTool.isPhone())return;
-  
+  if (ChungTool.isPhone()) return;
+
   Motus.addAnimation(new Motus.Animation({
     $el: $('#ingredient-section .textWrap')[0],
     keyframes: [{
@@ -65,9 +74,12 @@ function init_ingredient_animation() {
 
   Motus.addAnimation(new Motus.Animation({
     $el: $('#ingredient-section')[0],
-    keyframes: [
-      {backgroundPositionY: 0},
-      {backgroundPositionY: 100}
+    keyframes: [{
+        backgroundPositionY: 0
+      },
+      {
+        backgroundPositionY: 100
+      }
     ],
   }));
 }

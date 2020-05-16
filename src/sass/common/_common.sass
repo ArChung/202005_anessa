@@ -96,14 +96,16 @@ html,bidy
   +aniPicsWrap
   position: fixed
   top: 100%
-  right: 0
+  right: -50%
   z-index: 100
-  will-change: transform
-  transform: translate(100%, calc(-100% - 15px))
+  will-change: transform, top, margin-top
+  transform: translate(0%, calc(-100% - 15px))
   transform-origin: 100% 100%
+  margin-top: 0px
+  // transition: all .8s
   +dTime(.8s)
   +pad
-    transform: translate(100%, calc(-100% - 15px)) scale(0.8)
+    transform: translate(0%, calc(-100% - 15px)) scale(0.8)
   .bg
     +bg('index-pro2-1.png')
   
@@ -111,9 +113,12 @@ html,bidy
     +bg('index-pro0.gif')
     
   &.show
-    transform: translate(0%, calc(-100% - 15px))
+    // transform: translate(0%, calc(-100% - 15px))
+    right: 0
     +pad
-      transform: translate(0%, calc(-100% - 15px)) scale(0.75)
+      // top: 70%
+      // margin-top: -20px
+      // transform: translate(0%, calc(-100% - 15px)) scale(0.75)
   
 .custom-select
   position: relative

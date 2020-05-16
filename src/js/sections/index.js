@@ -2,7 +2,6 @@ function init_index() {
   init_index_video();
   init_index_intro();
   waitIndexImgs();
-  init_phone_eventBtn_position();
 }
 
 
@@ -36,7 +35,16 @@ function init_phone_eventBtn_position() {
   window.onscroll = function () {
     if (window.pageYOffset < 100) {
 
-      adjuctPos();
+      if ($('#event-btn').hasClass('in-index')) return;
+
+      const indexHeight = $('#index-section').height();
+      const screenHeight = document.documentElement.clientHeight;
+      const headerHeight = $('#header').height();
+      const btnHeight = $('#event-btn').height();
+      if (screenHeight > indexHeight + btnHeight / 3 + headerHeight) {
+        $('#event-btn')[0].setAttribute("style", `top:${((indexHeight + headerHeight) / screenHeight*100)}%; margin-top: ${btnHeight / 3}px;`);
+      }
+      $('#event-btn').addClass('in-index')
 
     } else {
 
@@ -47,28 +55,9 @@ function init_phone_eventBtn_position() {
       $('#event-btn').removeClass('in-index');
     }
   }
-
+  
   $('#event-btn').addClass('show');
-
-  adjuctPos();
-
-  function adjuctPos() {
-    if ($('#event-btn').hasClass('in-index')) return;
-
-    console.log(46546546546);
-    const indexHeight = $('#index-section').height();
-    const screenHeight = document.documentElement.clientHeight;
-    const headerHeight = $('#header').height();
-    const btnHeight = $('#event-btn').height();
-    if (screenHeight > indexHeight + btnHeight / 3 + headerHeight) {
-      $('#event-btn').css({
-        'top': (indexHeight + headerHeight) / screenHeight * 100 + '%',
-        'margin-top': btnHeight / 3 + 'px'
-      })
-    }
-
-    $('#event-btn').addClass('in-index')
-  }
+  $(window).scroll();
 }
 
 function waitIndexImgs() {
@@ -77,6 +66,8 @@ function waitIndexImgs() {
     })
     .done(function (instance) {
       index_play_intro();
+      init_phone_eventBtn_position();
+
     })
     .progress(function (instance, image) {
       // var result = image.isLoaded ? 'loaded' : 'broken';

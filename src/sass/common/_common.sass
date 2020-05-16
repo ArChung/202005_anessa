@@ -245,6 +245,7 @@ html,bidy
   width: 285px
   background-size: 100% 100%
   transform-origin: 50% 50%
+  border: 0
   +dTime(0.1s)
   
   &.blue
@@ -253,7 +254,10 @@ html,bidy
   &.white
     +bg('btn-3.png')
     width: 285px
-    
+  &.gray
+    +bg('btn-4.png')
+    width: 285px
+    height: 58px
   +phone
     height: 90px
     padding-top: 22px
@@ -263,6 +267,10 @@ html,bidy
       height: 90px
       width: 100%
     &.blue
+      height: 90px
+      width: 100%
+    &.gray
+      +bg('btn-4.png')
       height: 90px
       width: 100%
   &:after
@@ -281,7 +289,10 @@ html,bidy
     &:after
       right: 20px
 
-
+  &.disabled
+    pointer-events: none
+    &:after
+      display: none
 .form-input
   width: 100%
   background-color: #1199c6
@@ -299,8 +310,8 @@ html,bidy
     transition: background-color 5000s ease-in-out 0s
     -webkit-text-fill-color: white
 
-.shake-go 
-	+do-shake('shake-go ', 5, 5, 1, 300ms)
+// .shake-go 
+// 	+do-shake('shake-go ', 5, 5, 1, 300ms)
 
 .blocker
   z-index: 100

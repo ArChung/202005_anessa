@@ -246,6 +246,11 @@ $compass-imagehelper-imagesmap: (
     height: '58',
     hash: '11e13ab90663ac3ff54f965c325e40d1'
   ),
+  'btn-4.png': (
+    width: '448',
+    height: '75',
+    hash: '737462e7d8c5807eca9d2a602537c9bc'
+  ),
   'buyTxt.png': (
     width: '72',
     height: '19',
@@ -540,6 +545,26 @@ $compass-imagehelper-imagesmap: (
     width: '87',
     height: '138',
     hash: '363a4cd856ef227ab04688f03f90d1cd'
+  ),
+  'receive_index.png': (
+    width: '514',
+    height: '548',
+    hash: '8428e1f821571210a8289870d809e245'
+  ),
+  'receive_pro-1.gif': (
+    width: '163',
+    height: '189',
+    hash: '617c174b626da318dae52d7915f7dfbc'
+  ),
+  'receive_pro.png': (
+    width: '204',
+    height: '251',
+    hash: 'a7e21e0abb8c24d0e1d9abc05bf3074d'
+  ),
+  'receive_pro2.png': (
+    width: '163',
+    height: '189',
+    hash: 'a2ab6865ee7e974d7121980524082923'
   ),
   'store-1.jpg': (
     width: '108',
@@ -950,6 +975,22 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: 11e13ab90663ac3ff54f965c325e40d1;
   background-image: image-url('btn-3.png');
+}
+
+%btn-4-png {
+  // Available properties:
+  // prefix: ;
+  // width: 448;
+  // height: 75;
+  // filename: btn-4.png;
+  // basename: btn-4;
+  // dirname: images;
+  // ext: .png;
+  // path: btn-4.png;
+  // fullname: btn-4-png;
+  // mime: image/png;
+  // hash: 737462e7d8c5807eca9d2a602537c9bc;
+  background-image: image-url('btn-4.png');
 }
 
 %buyTxt-png {
@@ -1894,6 +1935,70 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: 363a4cd856ef227ab04688f03f90d1cd;
   background-image: image-url('pro1-badge.png');
+}
+
+%receive_index-png {
+  // Available properties:
+  // prefix: ;
+  // width: 514;
+  // height: 548;
+  // filename: receive_index.png;
+  // basename: receive_index;
+  // dirname: images;
+  // ext: .png;
+  // path: receive_index.png;
+  // fullname: receive_index-png;
+  // mime: image/png;
+  // hash: 8428e1f821571210a8289870d809e245;
+  background-image: image-url('receive_index.png');
+}
+
+%receive_pro-1-gif {
+  // Available properties:
+  // prefix: ;
+  // width: 163;
+  // height: 189;
+  // filename: receive_pro-1.gif;
+  // basename: receive_pro-1;
+  // dirname: images;
+  // ext: .gif;
+  // path: receive_pro-1.gif;
+  // fullname: receive_pro-1-gif;
+  // mime: image/gif;
+  // hash: 617c174b626da318dae52d7915f7dfbc;
+  background-image: image-url('receive_pro-1.gif');
+}
+
+%receive_pro-png {
+  // Available properties:
+  // prefix: ;
+  // width: 204;
+  // height: 251;
+  // filename: receive_pro.png;
+  // basename: receive_pro;
+  // dirname: images;
+  // ext: .png;
+  // path: receive_pro.png;
+  // fullname: receive_pro-png;
+  // mime: image/png;
+  // hash: a7e21e0abb8c24d0e1d9abc05bf3074d;
+  background-image: image-url('receive_pro.png');
+}
+
+%receive_pro2-png {
+  // Available properties:
+  // prefix: ;
+  // width: 163;
+  // height: 189;
+  // filename: receive_pro2.png;
+  // basename: receive_pro2;
+  // dirname: images;
+  // ext: .png;
+  // path: receive_pro2.png;
+  // fullname: receive_pro2-png;
+  // mime: image/png;
+  // hash: a2ab6865ee7e974d7121980524082923;
+  background-image: image-url('receive_pro2.png');
 }
 
 %store-1-jpg {

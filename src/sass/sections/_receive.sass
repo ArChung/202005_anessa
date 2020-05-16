@@ -1,0 +1,50 @@
+
+#mainContainer
+  margin-top: 0
+  padding-top: 0
+
+#receive
+  max-width: 514px
+  margin: 0 auto
+  .imgWrap
+    position: relative
+    img
+      display: block
+
+    .pro
+      +aniPicsWrap
+      position: absolute
+      bottom: -15px
+      right: 0
+      .pro-1
+        +bg('receive_pro2.png')
+      .pro-2
+        +bg('receive_pro-1.gif')
+
+  .txtWrap
+    padding: 50px 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .title
+      font-size: 28px
+      color: #0090b9
+      font-weight: bold
+    .infoWrap
+      display: flex
+      .pro
+        +bg('receive_pro.png')
+      .txt
+        flex: 1
+        flex-grow: 1
+        // width: 300px
+        display: flex
+        justify-content: center
+        flex-direction: column
+        font-size: 20px
+        p
+          margin: 12px 0
+  .form-btn
+    font-weight: bold
+    width: 100%

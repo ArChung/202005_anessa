@@ -1,8 +1,10 @@
-
-
 function init_beauty() {
-  init_beauty_Slider();
-  init_beauty_animation();
+  if ($('#beauty-section').hasClass('hide')) {
+    $('#beauty-section').empty();
+  } else {
+    init_beauty_Slider();
+    init_beauty_animation();
+  }
 }
 
 

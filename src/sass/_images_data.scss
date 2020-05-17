@@ -397,9 +397,9 @@ $compass-imagehelper-imagesmap: (
     hash: 'a5b9d72774dd53a307ccb38a9be25397'
   ),
   'moblie_index.jpg': (
-    width: '513',
-    height: '545',
-    hash: 'dfa43e905fa08e1f0d99f88c53ba1187'
+    width: '750',
+    height: '897',
+    hash: '8c5e7636b37cd6d1812d3c8689a32957'
   ),
   'moblie_index_without_txt.jpg': (
     width: '750',
@@ -467,9 +467,9 @@ $compass-imagehelper-imagesmap: (
     hash: 'e32ba7d92f78363930e9d08996a004c3'
   ),
   'playBtn.png': (
-    width: '113',
-    height: '141',
-    hash: 'b68b996ed02ddf776e3f75753b99249d'
+    width: '150',
+    height: '150',
+    hash: 'bcc40ed4b618f2a6582e07f4f16071e0'
   ),
   'pro-1.png': (
     width: '135',
@@ -547,9 +547,9 @@ $compass-imagehelper-imagesmap: (
     hash: '363a4cd856ef227ab04688f03f90d1cd'
   ),
   'receive_index.png': (
-    width: '514',
-    height: '548',
-    hash: '8428e1f821571210a8289870d809e245'
+    width: '513',
+    height: '545',
+    hash: 'dfa43e905fa08e1f0d99f88c53ba1187'
   ),
   'receive_pro-1.gif': (
     width: '163',
@@ -1460,8 +1460,8 @@ $compass-imagehelper-imagesmap: (
 %moblie_index-jpg {
   // Available properties:
   // prefix: ;
-  // width: 513;
-  // height: 545;
+  // width: 750;
+  // height: 897;
   // filename: moblie_index.jpg;
   // basename: moblie_index;
   // dirname: images;
@@ -1469,7 +1469,7 @@ $compass-imagehelper-imagesmap: (
   // path: moblie_index.jpg;
   // fullname: moblie_index-jpg;
   // mime: image/jpeg;
-  // hash: dfa43e905fa08e1f0d99f88c53ba1187;
+  // hash: 8c5e7636b37cd6d1812d3c8689a32957;
   background-image: image-url('moblie_index.jpg');
 }
 
@@ -1684,8 +1684,8 @@ $compass-imagehelper-imagesmap: (
 %playBtn-png {
   // Available properties:
   // prefix: ;
-  // width: 113;
-  // height: 141;
+  // width: 150;
+  // height: 150;
   // filename: playBtn.png;
   // basename: playBtn;
   // dirname: images;
@@ -1693,7 +1693,7 @@ $compass-imagehelper-imagesmap: (
   // path: playBtn.png;
   // fullname: playBtn-png;
   // mime: image/png;
-  // hash: b68b996ed02ddf776e3f75753b99249d;
+  // hash: bcc40ed4b618f2a6582e07f4f16071e0;
   background-image: image-url('playBtn.png');
 }
 
@@ -1940,8 +1940,8 @@ $compass-imagehelper-imagesmap: (
 %receive_index-png {
   // Available properties:
   // prefix: ;
-  // width: 514;
-  // height: 548;
+  // width: 513;
+  // height: 545;
   // filename: receive_index.png;
   // basename: receive_index;
   // dirname: images;
@@ -1949,7 +1949,7 @@ $compass-imagehelper-imagesmap: (
   // path: receive_index.png;
   // fullname: receive_index-png;
   // mime: image/png;
-  // hash: 8428e1f821571210a8289870d809e245;
+  // hash: dfa43e905fa08e1f0d99f88c53ba1187;
   background-image: image-url('receive_index.png');
 }
 

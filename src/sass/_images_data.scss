@@ -397,9 +397,9 @@ $compass-imagehelper-imagesmap: (
     hash: 'a5b9d72774dd53a307ccb38a9be25397'
   ),
   'moblie_index.jpg': (
-    width: '750',
-    height: '897',
-    hash: '6a259744860f6118b0579f5631a1134f'
+    width: '513',
+    height: '545',
+    hash: 'dfa43e905fa08e1f0d99f88c53ba1187'
   ),
   'moblie_index_without_txt.jpg': (
     width: '750',
@@ -1460,8 +1460,8 @@ $compass-imagehelper-imagesmap: (
 %moblie_index-jpg {
   // Available properties:
   // prefix: ;
-  // width: 750;
-  // height: 897;
+  // width: 513;
+  // height: 545;
   // filename: moblie_index.jpg;
   // basename: moblie_index;
   // dirname: images;
@@ -1469,7 +1469,7 @@ $compass-imagehelper-imagesmap: (
   // path: moblie_index.jpg;
   // fullname: moblie_index-jpg;
   // mime: image/jpeg;
-  // hash: 6a259744860f6118b0579f5631a1134f;
+  // hash: dfa43e905fa08e1f0d99f88c53ba1187;
   background-image: image-url('moblie_index.jpg');
 }
 

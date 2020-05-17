@@ -1,6 +1,7 @@
 function init_beauty() {
   if ($('#beauty-section').hasClass('hide')) {
     $('#beauty-section').empty();
+    $('#menu .beautyMenuBtn').addClass('hide');
   } else {
     init_beauty_Slider();
     init_beauty_animation();

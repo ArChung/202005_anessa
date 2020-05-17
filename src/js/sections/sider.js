@@ -72,7 +72,7 @@ function init_sider_menuBtn() {
     console.log(`#${t.attr('data-url')}-section`);
     const target = $(`#${t.attr('data-url')}-section`)
 
-    ChungTool.pageScrollAni(target.offset().top - 100);
+    ChungTool.pageScrollAni(target.offset().top - 80);
     slideout.close();
   });
 }
